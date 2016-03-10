@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SmartSmsFilter</string>
+    <string name="list_first_item">骚扰短信</string>
 </resources>

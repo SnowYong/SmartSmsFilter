@@ -8,13 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by Administrator on 2016.03.08.
  */
 public class SmartSmsFilterOpenHelper extends SQLiteOpenHelper {
-    private static final String CREATE_SMSDB = "" +
+    private static final String CREATE_SMS_DB = "" +
             "create table SMSFilter (" +
             "id integer primary key autoincrement, " +
             "smsFrom text, " +
             "filterState blob, " +
-            "deleteTimes integer" +
-            "undeleteTimes integer)";
+            "deleteTimes integer)";
 
 
     public SmartSmsFilterOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -23,7 +22,7 @@ public class SmartSmsFilterOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_SMSDB);
+        db.execSQL(CREATE_SMS_DB);
     }
 
     @Override
